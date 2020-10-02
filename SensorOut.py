@@ -81,7 +81,7 @@ while True:
     file1.write(' Pressure= {0:0.4f}inHg \n'.format(KPA))
     
     thermvar = [Faren, humidity, KPA] 
-    checkData(thermvar, 68, 72, 30, 50, 0, 10000)
+    checkData(thermvar, 60, 80, 10, 60, 0, 10000)
 
     sleep(900)
    
