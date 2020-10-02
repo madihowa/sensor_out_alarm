@@ -16,7 +16,7 @@ def checkData(thermvar, tMin, tMax, hMin, hMax, pMin, pMax ):
     humid = thermvar[1]
     pressure = thermvar[2]
     if temp < tMin:
-       emailList = ["madison.howard@ttu.edu"]
+       emailList = ["nural.akchurin@ttu.edu","andrew.whitbeck@ttu.edu", "sonaina.undleeb@ttu.edu"]
        subjectLine = "Alert from APDL Test"
        emailContent = "Temp less than {} degrees".format(tMin)
        email(emailList, subjectLine, emailContent)
@@ -81,7 +81,7 @@ while True:
     file1.write(' Pressure= {0:0.4f}inHg \n'.format(KPA))
     
     thermvar = [Faren, humidity, KPA] 
-    checkData(thermvar, 100, 101, 0, 1000, 0, 10000)
+    checkData(thermvar, 68, 72, 30, 50, 0, 10000)
 
     sleep(900)
    
