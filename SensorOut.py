@@ -18,12 +18,12 @@ def checkData(thermvar, tMin, tMax, hMin, hMax, pMin, pMax ):
     if temp < tMin:
        emailList = ["nural.akchurin@ttu.edu","andrew.whitbeck@ttu.edu", "sonaina.undleeb@ttu.edu"]
        subjectLine = "Alert from APDL Test"
-       emailContent = "Temp less than {} degrees. The temp reading was {}, humidity was {} and pressure was {} ".format(tMin, temp, humid, pressure)
+       emailContent = "FROM CLEAN ROOM : Temp less than {} degrees. The temp reading was {}, humidity was {} and pressure was {} ".format(tMin, temp, humid, pressure)
        email(emailList, subjectLine, emailContent)
     elif temp > tMax:
        emailList = ["nural.akchurin@ttu.edu","andrew.whitbeck@ttu.edu", "sonaina.undleeb@ttu.edu"]
        subjectLine = "Alert from APDL Test"
-       emailContent = "Temp more than {} degrees. The temp reading was {}, humidity was {} and pressure was {} ".format(tMax, temp, humid, pressure)
+       emailContent = "FROM CLEAN ROOM :Temp more than {} degrees. The temp reading was {}, humidity was {} and pressure was {} ".format(tMax, temp, humid, pressure)
        email(emailList, subjectLine, emailContent)
     else:
         pass
@@ -31,12 +31,12 @@ def checkData(thermvar, tMin, tMax, hMin, hMax, pMin, pMax ):
     if humid < hMin:
        emailList = ["nural.akchurin@ttu.edu","andrew.whitbeck@ttu.edu", "sonaina.undleeb@ttu.edu"]
        subjectLine = "Alert from APDL Test"
-       emailContent = "Humidity was less than {} degrees. The temp reading was {}, humidity was {} and pressure was {} ".format(hMin, temp, humid, pressure)
+       emailContent = "FROM CLEAN ROOM :Humidity was less than {} degrees. The temp reading was {}, humidity was {} and pressure was {} ".format(hMin, temp, humid, pressure)
        email(emailList, subjectLine, emailContent)
-    elif humid > tMax:
+    elif humid > hMax:
        emailList = ["nural.akchurin@ttu.edu","andrew.whitbeck@ttu.edu", "sonaina.undleeb@ttu.edu"]
        subjectLine = "Alert from APDL Test"
-       emailContent = "Humidity was more than {} degrees. The temp reading was {}, humidity was {} and pressure was {} ".format(hMin, temp, humid, pressure)
+       emailContent = "FROM CLEAN ROOM :Humidity was more than {} degrees. The temp reading was {}, humidity was {} and pressure was {} ".format(hMin, temp, humid, pressure)
        email(emailList, subjectLine, emailContent)
     else:
         pass
@@ -44,12 +44,12 @@ def checkData(thermvar, tMin, tMax, hMin, hMax, pMin, pMax ):
     if pressure < pMin:
        emailList = ["nural.akchurin@ttu.edu", "andrew.whitbeck@ttu.edu", "sonaina.undleeb@ttu.edu"]
        subjectLine = "Alert from APDL Test"
-       emailContent = "Pressure was less than {}. The temp reading was {}, humidity was {} and pressure was {} ".format(pMin, temp, humid, pressure)
+       emailContent = "FROM CLEAN ROOM :Pressure was less than {}. The temp reading was {}, humidity was {} and pressure was {} ".format(pMin, temp, humid, pressure)
        email(emailList, subjectLine, emailContent)
     elif pressure > pMax:
        emailList = ["nural.akchurin@ttu.edu","andrew.whitbeck@ttu.edu", "sonaina.undleeb@ttu.edu"]
        subjectLine = "Alert from APDL Test"
-       emailContent = "Pressure was more than {}. The temp reading was {}, humidity was {} and pressure was {} ".format(pMin, temp, humid, pressure)
+       emailContent = "FROM CLEAN ROOM :Pressure was more than {}. The temp reading was {}, humidity was {} and pressure was {} ".format(pMin, temp, humid, pressure)
        email(emailList, subjectLine, emailContent)
     else:
         pass
